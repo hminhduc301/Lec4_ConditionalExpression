@@ -1,0 +1,18 @@
+
+package Lec4;
+import java.util.Scanner;
+public class Ex7 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter 3 integer: ");
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        int z = scanner.nextInt();
+        if(x > y && x > z)
+            System.out.println("the largest number is "+ x);
+        else if(y > x && y > z)
+            System.out.println("the largest number is "+ y);
+        else
+            System.out.println("the largest number is "+ z);
+    }
+}
