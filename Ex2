@@ -1,0 +1,21 @@
+
+package Lec4;
+import java.util.Scanner;
+public class ex2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an age: ");
+        int num = scanner.nextInt();
+        if(num > 0 && num <=12)
+            System.out.println("Child!");
+        else if(num > 12 && num <= 19)
+            System.out.println("Teenager!");
+        else if(num > 19 && num <= 59)
+            System.out.println("Adult!");
+        else
+            System.out.println("Senior!");
+            
+
+    }
+    
+}
