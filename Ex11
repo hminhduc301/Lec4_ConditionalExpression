@@ -1,0 +1,41 @@
+
+package Lec4_ConditionalExpression;
+import java.util.Scanner;
+public class Ex11 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a:");
+        double a = input.nextDouble();
+        System.out.print("Enter b:");
+        double b = input.nextDouble();
+        System.out.print("Enter c:");
+        double c = input.nextDouble();
+        input.close();
+        if (a == 0) {
+            System.out.println("Phuong trinh tuyen tinh");
+            if (b == 0) {
+                if (c == 0) {
+                    System.out.println("Vo so nghiem");
+                } else {
+                    System.out.println("Vo nghiem");
+                }
+            } else {
+                double root = -c / b;
+                System.out.println("Phuong trinh co 1 nghiem: x = " + root);
+            }
+        } else {
+            double discriminant = b * b - 4 * a * c;
+            if (discriminant > 0) {
+                // The equation has two distinct real roots
+                double root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                double root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                System.out.println("Phuong trinh co 2 nghiem phan biet: x1 = " + root1 + " and x2 = " + root2);
+            } else if (discriminant == 0) {
+                double root = -b / (2 * a);
+                System.out.println("Phuong trinh co 2 nghiem: x1 = x2 = " + root);
+            } else {
+                System.out.println("Phuong trinh khong co nghiem.");
+            }
+        }
+    }
+}
